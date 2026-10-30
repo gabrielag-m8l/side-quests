@@ -56,6 +56,15 @@ Reacciona tú con 🗡️ y después corre "Enviar misiones (lunes)" a mano para
 
 Si alguna vez quieres volver a empezar, corre ese workflow otra vez: el mensaje nuevo reemplaza al anterior y las suscripciones arrancan de cero.
 
+## Si algo falla
+
+El bot avisa el error exacto que devolvió Slack. Los dos más probables:
+
+- `missing_scope`: falta un permiso. Vuelve a **OAuth & Permissions**, agrega el que nombra el error y reinstala la app. Según la configuración del workspace, leer reacciones puede pedir también `channels:history` (o `groups:history` si el canal es privado) e `im:history`.
+- `not_in_channel`: el bot no está en el canal. Corre `/invite @Side Quests` ahí.
+
+Si cambias de canal, corre otra vez el workflow de suscripción: `subscription.json` apunta al mensaje viejo.
+
 ## Horarios
 
 Los crons están en UTC para que caigan lunes 10:00 y viernes 17:00 hora de Buenos Aires (UTC-3). Si estás en otra zona, edita las líneas `cron:` en `.github/workflows/`.
