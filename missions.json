@@ -9,7 +9,7 @@
   { "id": "recomienda", "text": "Recomienda en un canal algo que estés leyendo, viendo o escuchando. No tiene que ser de trabajo." },
   { "id": "cita-solo", "text": "Llévate a ti mismo a una cita corta: un café, una librería, una plaza. Tú y nadie más." },
   { "id": "cocina-cero", "text": "Cocina u hornea algo desde cero, aunque te salga regular. Sobre todo si te sale regular." },
-  { "id": "atardecer", "text": "Mira un atardecer completo sin sacarle una sola foto." },
+  { "id": "amanecer", "text": "Despierta temprano, mira un amanecer y comparte una foto con el equipo." },
   { "id": "pide-ayuda", "text": "Pide ayuda con algo en lo que estés atascado, por mínimo que sea. Hoy mismo." },
   { "id": "palabra-nueva", "text": "Aprende una palabra que no conocías y métela en una conversación real antes del viernes." },
   { "id": "mira-otro-equipo", "text": "Pregúntale a alguien de otro equipo en qué está trabajando y escucha hasta entenderlo de verdad." },
