@@ -1,0 +1,22 @@
+[
+  { "id": "cafe-random", "text": "Invita a alguien del equipo con quien casi nunca hablas a un café de 15 minutos (virtual vale) antes del viernes." },
+  { "id": "caminata-sin-pantalla", "text": "Sal a caminar 20 minutos con el teléfono en el bolsillo. Sin podcast, sin llamadas, sin responder nada." },
+  { "id": "gracias-publico", "text": "Agradece públicamente en un canal a alguien que te destrabó algo esta semana. Sé específico sobre qué hizo." },
+  { "id": "almuerzo-afuera", "text": "Almuerza lejos de tu escritorio y sin pantallas. Que sea una comida y no un trámite entre dos reuniones." },
+  { "id": "ensena-algo", "text": "Comparte en un canal un truco, atajo o herramienta que uses todos los días y que creas que nadie más conoce." },
+  { "id": "playlist-mood", "text": "Arma una playlist nueva alrededor de un solo estado de ánimo y compártela con tu equipo." },
+  { "id": "lugar-nuevo", "text": "Entra a un lugar cerca de tu casa donde nunca entraste. Sin plan y sin buscar reseñas antes." },
+  { "id": "recomienda", "text": "Recomienda en un canal algo que estés leyendo, viendo o escuchando. No tiene que ser de trabajo." },
+  { "id": "cita-solo", "text": "Llévate a ti mismo a una cita corta: un café, una librería, una plaza. Tú y nadie más." },
+  { "id": "cocina-cero", "text": "Cocina u hornea algo desde cero, aunque te salga regular. Sobre todo si te sale regular." },
+  { "id": "atardecer", "text": "Mira un atardecer completo sin sacarle una sola foto." },
+  { "id": "pide-ayuda", "text": "Pide ayuda con algo en lo que estés atascado, por mínimo que sea. Hoy mismo." },
+  { "id": "palabra-nueva", "text": "Aprende una palabra que no conocías y métela en una conversación real antes del viernes." },
+  { "id": "mira-otro-equipo", "text": "Pregúntale a alguien de otro equipo en qué está trabajando y escucha hasta entenderlo de verdad." },
+  { "id": "escritorio", "text": "Ordena tu escritorio. El físico, no el del computador." },
+  { "id": "presentate", "text": "Escribe en un canal una cosa rara, inútil o muy específica que sepas hacer." },
+  { "id": "galeria", "text": "Borra 50 fotos de tu galería. Las capturas de pantalla cuentan y son la mitad del problema." },
+  { "id": "disco-entero", "text": "Escucha un disco entero, en orden y sin saltar canciones. Como se hacía antes." },
+  { "id": "aprende-nombre", "text": "Aprende qué hace exactamente alguien cuyo cargo nunca terminaste de entender." },
+  { "id": "agujero-random", "text": "Elige un tema al azar que no te sirva para nada y cae en el agujero durante 15 minutos." }
+]

@@ -1,0 +1,25 @@
+name: Publicar resumen (viernes)
+
+on:
+  schedule:
+    # 20:00 UTC = 17:00 en Buenos Aires. Ajusta a tu zona horaria.
+    - cron: "0 20 * * 5"
+  workflow_dispatch:
+
+jobs:
+  summary:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Publicar resumen
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SIDE_QUESTS_CHANNEL: ${{ secrets.SIDE_QUESTS_CHANNEL }}
+          JOIN_EMOJI: ${{ vars.JOIN_EMOJI }}
+          DONE_EMOJIS: ${{ vars.DONE_EMOJIS }}
+        run: python side_quests.py resumen

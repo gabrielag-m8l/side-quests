@@ -1,0 +1,32 @@
+name: Publicar mensaje de suscripción
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  abrir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Publicar y fijar el mensaje
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SIDE_QUESTS_CHANNEL: ${{ secrets.SIDE_QUESTS_CHANNEL }}
+          JOIN_EMOJI: ${{ vars.JOIN_EMOJI }}
+        run: python side_quests.py abrir
+
+      - name: Guardar la referencia del mensaje
+        run: |
+          git config user.name "side-quests-bot"
+          git config user.email "actions@github.com"
+          git add subscription.json
+          git diff --staged --quiet || git commit -m "Mensaje de suscripción"
+          git push

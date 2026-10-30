@@ -1,0 +1,36 @@
+name: Enviar misiones (lunes)
+
+on:
+  schedule:
+    # 13:00 UTC = 10:00 en Buenos Aires. Ajusta a tu zona horaria.
+    - cron: "0 13 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Enviar misiones
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SIDE_QUESTS_CHANNEL: ${{ secrets.SIDE_QUESTS_CHANNEL }}
+          JOIN_EMOJI: ${{ vars.JOIN_EMOJI }}
+          DONE_EMOJIS: ${{ vars.DONE_EMOJIS }}
+        run: python side_quests.py asignar
+
+      - name: Guardar las misiones de la semana
+        run: |
+          git config user.name "side-quests-bot"
+          git config user.email "actions@github.com"
+          git add assignments subscription.json
+          git diff --staged --quiet || git commit -m "Misiones de la semana"
+          git push

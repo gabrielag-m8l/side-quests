@@ -1,0 +1,22 @@
+# Pega este manifiesto en https://api.slack.com/apps -> Create New App -> From a manifest
+display_information:
+  name: Side Quests
+  description: Una misión chiquita y al azar cada lunes, por mensaje directo.
+  background_color: "#2b2d31"
+features:
+  bot_user:
+    display_name: Side Quests
+    always_online: false
+oauth_config:
+  scopes:
+    bot:
+      - chat:write      # publicar el mensaje del canal y mandar los DM
+      - im:write        # abrir la conversación directa con cada persona
+      - users:read      # distinguir personas de bots
+      - reactions:read  # leer quién se suscribió y quién completó su misión
+      - pins:write      # fijar el mensaje de suscripción en el canal
+settings:
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  is_hosted: false
+  token_rotation_enabled: false
